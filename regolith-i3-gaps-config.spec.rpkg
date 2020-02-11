@@ -1,10 +1,10 @@
 Name:       {{{ git_dir_name }}}
 Version:    {{{ git_dir_version lead=2.2 }}}
-Release:    1%{?dist}
-Summary:    This is a test package.
+Release:    2%{?dist}
+Summary:    Regolith i3-gaps config file.
 
-License:    GPLv3
-URL:        https://someurl.org
+License:    MIT
+URL:        https://github.com/regolith-linux/regolith-i3-gaps-config
 VCS:        {{{ git_dir_vcs }}}
 
 Source: {{{ git_dir_pack }}}
@@ -14,6 +14,13 @@ This is a test package.
 
 %prep
 {{{ git_dir_setup_macro }}}
+
+%install
+mkdir -p %{buildroot}/etc/regolith/i3/
+install -m 644 config %{buildroot}/etc/regolith/i3/
+
+%files
+/etc/regolith/i3/config
 
 %changelog
 {{{ git_dir_changelog }}}
