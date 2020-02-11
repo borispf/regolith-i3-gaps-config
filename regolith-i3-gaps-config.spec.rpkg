@@ -1,5 +1,5 @@
 Name:       {{{ git_dir_name }}}
-Version:    {{{ git_dir_version lead=2 }}}
+Version:    {{{ git_dir_version lead=2.2 }}}
 Release:    1%{?dist}
 Summary:    This is a test package.
 
